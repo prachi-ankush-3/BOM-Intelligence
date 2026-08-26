@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: #d9dde3;
+}
+
+/* Traditional desktop GUI group box (fieldset) */
+.group-box {
+  position: relative;
+  border: 1px solid #C8CDD3;
+  border-radius: 3px;
+  background: #FAFBFC;
+  padding: 18px 16px 14px 16px;
+  margin-top: 10px;
+}
+
+.group-box-title {
+  position: absolute;
+  top: -10px;
+  left: 12px;
+  background: #F4F5F7;
+  padding: 0 6px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+/* Thin, compact scrollbar for the file list / desktop app feel */
+.thin-scrollbar::-webkit-scrollbar {
+  width: 12px;
+}
+.thin-scrollbar::-webkit-scrollbar-track {
+  background: #dfe3ea;
+}
+.thin-scrollbar::-webkit-scrollbar-thumb {
+  background: #b7bec9;
+  border: 2px solid #dfe3ea;
+  border-radius: 2px;
+}
+.thin-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #9aa3b0;
+}
+
+/* Title bar window control buttons */
+.win-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 22px;
+  font-size: 11px;
+  color: #333;
+  cursor: pointer;
+  user-select: none;
+}
+.win-btn:hover {
+  background: #e2e5ea;
+}
+.win-btn.close-btn:hover {
+  background: #e81123;
+  color: #fff;
+}
+
+/* Remove number input spinners / keep inputs traditional */
+input[type="text"] {
+  outline: none;
+}
